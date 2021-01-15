@@ -1,0 +1,12 @@
+bitwardenrs:
+    fullnameOverride: "bitwarden"
+    bitwardenrs:
+        admin:
+            enabled: false
+    persistence:
+        enabled: true
+        size: 954Mi
+    podAnnotations:
+        backup.velero.io/backup-volumes: bitwarden
+templates:
+    backup_schedule: ""

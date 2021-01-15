@@ -1,0 +1,11 @@
+goldilocks:
+    fullnameOverride: "goldilocks"
+    image:
+        pullPolicy: "IfNotPresent"
+    dashboard:
+        replicaCount: 1
+        ingress:
+            hosts:
+              - host: goldilocks.in.lab
+                paths:
+                    - "/"
