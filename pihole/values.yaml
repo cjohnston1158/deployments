@@ -3,7 +3,7 @@ pihole:
     # This is a YAML-formatted file.
     # Declare variables to be passed into your templates.
     
-    serviceTCP:
+    serviceWeb:
       type: LoadBalancer
       externalTrafficPolicy: Local
       # loadBalancerIP: ""
@@ -12,7 +12,7 @@ pihole:
         # metallb.universe.tf/address-pool: network-services
         metallb.universe.tf/allow-shared-ip: pihole-svc
     
-    serviceUDP:
+    serviceDns:
       type: LoadBalancer
       externalTrafficPolicy: Local
       # loadBalancerIP: ""
@@ -20,9 +20,9 @@ pihole:
       annotations:
         # metallb.universe.tf/address-pool: network-services
         metallb.universe.tf/allow-shared-ip: pihole-svc
-    
+
     virtualHost: pi.hole
-    
+
     ingress:
       enabled: true
       annotations:
